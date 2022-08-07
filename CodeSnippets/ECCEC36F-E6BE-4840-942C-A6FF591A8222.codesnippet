@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>cTableView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, kSafeArea_H()) style:UITableViewStylePlain];
+self.tableView = tableView;
+tableView.delegate = self;
+tableView.dataSource = self;
+tableView.showsVerticalScrollIndicator = NO;
+tableView.showsHorizontalScrollIndicator = NO;
+tableView.backgroundColor = UIColor.clearColor;
+UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+tableView.tableFooterView = tableFooterView;
+MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    
+}];
+header.lastUpdatedTimeLabel.hidden = YES;
+header.stateLabel.hidden = YES;
+tableView.mj_header = header;
+MJRefreshBackNormalFooter *footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+    
+}];
+tableView.mj_footer = footer;
+[self.view addSubview:tableView];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>ECCEC36F-E6BE-4840-942C-A6FF591A8222</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Create TableView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

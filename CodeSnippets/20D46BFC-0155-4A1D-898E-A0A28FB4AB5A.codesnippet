@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>cFuncItem</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSArray *functionItemTitles = @[@"ITEM_1", @"ITEM_2", @"ITEM_3"];
+UIView *functionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0)];
+functionView.backgroundColor = UIColor.whiteColor;
+functionView.tag = TAG_FUNCTION_VIEW + i;
+[scrollView addSubview:functionView];
+
+NSInteger functionItemEachLineCount = 3;
+CGFloat functionItemPadding = PADDING_HORIZ;
+CGFloat functionItemSpacingHoriz = WIDTH(9);
+CGFloat functionItemSpacingVertical = functionItemSpacingHoriz;
+CGFloat functionItemOriginY = WIDTH(0);
+CGFloat functionItemH = WIDTH(38);
+CGFloat functionItemW = ((functionView.width - functionItemPadding * 2) - (functionItemSpacingHoriz * (functionItemEachLineCount - 1))) / functionItemEachLineCount;
+for (int i = 0; i &lt; functionItemTitles.count; i ++) {
+    NSInteger itemIndex = i % functionItemEachLineCount;
+    CGFloat itemX = functionItemPadding + itemIndex * (functionItemW + functionItemSpacingHoriz);
+    NSInteger functionItemLines = i / functionItemEachLineCount;
+    CGFloat functionItemY = functionItemOriginY + functionItemLines * (functionItemH + functionItemSpacingVertical);  
+    UIButton *functionButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    functionButton.frame = CGRectMake(itemX, functionItemY, functionItemW, functionItemH);
+    functionButton.titleLabel.font = Font_Regular(11);
+    functionButton.backgroundColor = UIColor.whiteColor;
+    [functionButton setTitle:functionItemTitles[i] forState:UIControlStateNormal];
+    [functionButton setTitleColor:TEXT_COMMON_COLOR forState:UIControlStateNormal];
+    [functionButton setImage:[UIImage imageNamed:functionItemTitles[i]] forState:UIControlStateNormal];
+    [functionButton addTarget:self action:@selector(functionButtonClickedEvent:) forControlEvents:UIControlEventTouchUpInside];
+    [functionButton setAdjustsImageWhenHighlighted:NO];
+    [functionButton setImageAlignment:ButtonImageAlignmentTop interval:WIDTH(6)];
+    [functionView addSubview:functionButton];
+    functionButton.tag = TAG_FUNCTION_BUTTON + i;
+    [functionButton setCornerRadius:WIDTH(3)];
+    if (itemIndex &gt; 0) {
+        UIView *separatorLine = [[UIView alloc] initWithFrame:CGRectMake(itemX, functionItemY, 1, functionItemH)];
+        separatorLine.backgroundColor = COLOR_W(229);
+        [functionView addSubview:separatorLine];
+    }
+    if (functionItemLines &gt; 0) {
+        UIView *separatorLine = [[UIView alloc] initWithFrame:CGRectMake(itemX, functionItemY, functionItemW, 1)];
+        separatorLine.backgroundColor = COLOR_W(229);
+        [functionView addSubview:separatorLine];
+    }
+    
+    if (i == functionItemTitles.count - 1) {
+        functionView.height = functionButton.bottom + functionItemPadding;
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>20D46BFC-0155-4A1D-898E-A0A28FB4AB5A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Function Items</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ctf</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>BaseTextField *textField = [BaseTextField viewWithFrame:&lt;#(CGRect)#&gt;];
+textField.font = Font_Regular(13);
+textField.placeholder = @"";
+textField.textColor = TEXT_COMMON_COLOR;
+textField.backgroundColor = COLOR_W(210);
+[textField setCornerRadius:WIDTH(5)];
+[&lt;#(superView)#&gt; addSubview:textField];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>623F38A1-1388-4C25-B7B5-46972F409E86</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Create UITextField</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

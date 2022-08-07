@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>cAttributeString</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSString *appendText_1 = @"";
+NSString *appendText_2 = @"";
+NSString *attrText = [appendText_1 stringByAppendingString:appendText_2];;
+        NSDictionary *attrs = @{
+            NSFontAttributeName : Font_Regular(18),
+            NSForegroundColorAttributeName : TEXT_COMMON_COLOR
+        };
+NSMutableAttributedString *attrM = [[NSMutableAttributedString alloc] initWithString:attrText attributes:attrs];
+NSDictionary *attrs_add = @{
+    NSForegroundColorAttributeName : MAIN_COLOR
+};
+[attrM addAttributes:attrs_add range:NSMakeRange(appendText_1.length, appendText_2.length)];
+label.attributedText = attrM;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>67A9923C-A649-495F-BB13-B91CC9A4F420</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Create Mutable Attribute String</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
